@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --beige:#DDD0C8;
+    --darkgrey:#323232;
+    --white:#fff;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--beige);
+}
+h1 {
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+#signupcontainer{
+    display: flex;
+    background-color: var(--white);
+    width: 70vw;
+    height: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+}
+#signupcontainer .imgcontainer {
+    width: 50%;
+}
+#signupcontainer .imgcontainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+#signupcontainer .formcontainer{
+    width: 50%;
+    padding: 1rem;
+}
+#signupcontainer .formcontainer form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#signupcontainer .formcontainer form label{
+    font-size: 1.2rem;
+}
+#signupcontainer #email-error, 
+#signupcontainer #password-error{
+    color: red;
+}
+#signupcontainer .formcontainer form input{
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px; 
+    outline: none;
+    border: 0.2px solid var(--darkgrey);
+}
+#signupcontainer .formcontainer form button{
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: 5px; 
+    background-color: var(--darkgrey);
+    color: var(--white);
+    text-transform: uppercase;
+}
+#signupcontainer .formcontainer a{
+    text-decoration: none;
+    text-transform: capitalize;
+    margin-top: 10px;
+    color: var(--darkgrey);
+}
+#response{
+    color: red;
+    text-align: center;
+}

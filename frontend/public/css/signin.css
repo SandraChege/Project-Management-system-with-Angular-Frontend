@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --beige:#DDD0C8;
+    --darkgrey:#323232;
+    --white:#fff;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--beige);
+}
+h1 {
+    font-size: 3rem;
+    margin-top: -3rem;
+}
+#signincontainer{
+    display: flex;
+    background-color: var(--white);
+    width: 70vw;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 1.5rem;
+}
+#signincontainer .imgcontainer {
+    width: 50%;
+}
+#signincontainer .imgcontainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+#signincontainer .formcontainer{
+    width: 50%;
+    padding: 1rem;
+}
+#signincontainer .formcontainer form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#signincontainer .formcontainer form label{
+    font-size: 1.2rem;
+}
+#signincontainer #email-error, 
+#signincontainer #password-error{
+    color: red;
+}
+#signincontainer .formcontainer form {
+    margin-top: 30px;
+}
+#signincontainer .formcontainer form input{
+    padding: 15px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: 5px; 
+    outline: none;
+    border: 0.2px solid var(--darkgrey);
+}
+#signincontainer .formcontainer form button{
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px; 
+    background-color: var(--darkgrey);
+    color: var(--white);
+    text-transform: uppercase;
+}
+#signincontainer .formcontainer a{
+    text-decoration: none;
+    text-transform: capitalize;
+    margin-top: 10px;
+    color: var(--darkgrey);
+}
+#response{
+    color: red;
+    text-align: center;
+}

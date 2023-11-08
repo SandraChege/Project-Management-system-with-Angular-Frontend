@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --beige:#DDD0C8;
+    --darkgrey:#323232;
+    --white:#fff;
+    --black:#000;
+}
+.usercontainer{
+    display: grid;
+    grid-template-areas: 'company dashboard';
+    grid-template-rows: 1fr;
+    grid-template-columns: 15%  85%;
+    width: 100vw;
+    height: 100vh;
+}
+.container-one{
+    grid-area: company;
+    background-color: var(--darkgrey);
+    color: var(--white);
+}
+.container-one h1{
+    font-size: 2rem;
+}
+.container-one div{
+    margin-top: 3rem;
+}
+.container-one div button{
+    margin-top: 2rem;
+    background-color: var(--darkgrey);
+    border: none;
+    outline: none;
+}
+.container-one div button a{
+    color: var(--white);
+    text-decoration: none;
+}
+.container-one div button a:hover{
+    color:var(--beige);
+    font-weight: 700;
+}
+.container-two{
+    grid-area: dashboard;
+    background-color: var(--beige);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.container-two .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.container-two .navbar .date p{ 
+    font-size: 1.3rem;
+}
+.container-two .accountIcon{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.container-two .accountIcon .p-icon{
+    font-size: 40px;
+}
+.container-two .accountIcon .accountDropdown a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: var(--black);
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-left: -50px;
+    margin-top: 7px;
+}
+/* project */
+.projectItems {
+    margin-top: 10px;
+}
+
+.projectItem {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    justify-content: space-between;
+    margin: 10px 5px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    height: 400px;
+}
+.projectName{
+    text-align: center;
+    border-bottom: solid gray 1px;
+    margin: 5px;
+    font-size: 2rem;
+    padding: 5px;
+}
+.projectDetails{
+    font-size: 1.5rem;
+    line-height: 30px;
+}
+.label {
+    font-weight: bold; 
+    color: #333;
+}
+.value {
+    color: #666;
+}
+.status{
+    display: flex;
+    padding: 10px;
+    border: solid grey 2px;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+.noProject{
+    font-size: 2rem;
+    text-align: center;
+}
+.noProjects{
+    /* border: solid gray 2px; */
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.account ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.account ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.account ul li {
+    margin: 10px;
+}
+
+.accountIcon ion-icon {
+    position: relative;
+    margin: 0;
+    font-size: 30px;
+}
+
+.accountIcon {
+    display: flex;
+    gap: 10px;
+}
+
+.accountDropdown {
+    position: relative;
+    display: block;
+}
+
+.accountDropdown:hover {
+    background-color: rgb(224, 224, 224);
+    padding: 5px;
+}
+
+.accountDropdown a {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.accountDropdown:hover .dropdown-content {
+    display: block;
+    width: auto;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(192, 190, 190);
+    color: white;
+}

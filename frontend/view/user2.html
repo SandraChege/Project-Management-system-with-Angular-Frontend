@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="../public/css/user2.css" />
+</head>
+
+<body>
+  <div class="users usercontainer">
+    <div class="container-one">
+      <h1>World Waters</h1>
+        <div>
+          <h3>Dashboard</h3>
+            <button><a href="signin.html">Logout</a></button>
+        </div>
+    </div>
+    <div class="container-two">
+      <div class="navbar">
+        <div class="date">
+          <p id="dateDisplay">Today's Date</p>
+        </div>
+        <div class="accountIcon" >
+          
+          <div class="accountDropdown">
+            <a href="#" id="user">User</a>
+            <div class="dropdown-content">
+              <a href="#">Profile</a>
+              <a href="../index.html">Logout</a>
+            </div>
+          </div>
+          <div><ion-icon class="p-icon" name="person-circle-outline"></ion-icon></div>
+        </div>
+
+        <!--  <i class="fa-solid fa-user">User</i> -->
+      </div>
+      <h2>My Project</h2>
+      <div class="projectItems">
+        <div class="projectItem">
+
+
+        </div>
+      </div>
+      <div class="status">
+
+      </div>
+      <div class="noProjects" style="display: none;">
+
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../dist/user2.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+<script>
+  function updateDate() {
+    const dateElement = document.getElementById("dateDisplay");
+    const now = new Date();
+    const options = { year: "numeric", month: "long", day: "numeric" };
+    const formattedDate = now.toLocaleDateString("en-US", options);
+    dateElement.textContent = formattedDate;
+  }
+  updateDate();
+  setInterval(updateDate, 24 * 60 * 60 * 1000);
+</script>
+
+</html>

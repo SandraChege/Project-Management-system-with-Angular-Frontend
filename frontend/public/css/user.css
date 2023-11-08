@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --beige:#DDD0C8;
+    --darkgrey:#323232;
+    --white:#fff;
+    --black:#000;
+}
+.container {
+    display: grid;
+    grid-template-areas: 'company dashboard';
+    grid-template-rows: 1fr;
+    grid-template-columns: 15%  85%;
+    width: 100vw;
+    height: 100vh;
+}
+.company {
+    grid-area: company;
+    background-color: var(--darkgrey);
+    color: var(--white);
+}
+.company h1{
+    font-size: 2rem;
+}
+.company div{
+    margin-top: 3rem;
+}
+.company div button{
+    margin-top: 2rem;
+    background-color: var(--darkgrey);
+    border: none;
+    outline: none;
+}
+.company div button a{
+    color: var(--white);
+    text-decoration: none;
+}
+.dashboard{
+    grid-area: dashboard;
+    background-color: var(--beige);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.dashboard .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.dashboard .nav .date{
+    font-size: 1.3rem;
+}
+.dashboard .accountIcon{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 10px;
+}
+.dashboard .accountIcon .p-icon{
+    font-size: 40px;
+}
+.dashboard .accountIcon .accountDropdown a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: var(--black);
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.projectContainer .projectListHeader{
+    display: flex;
+    justify-content: space-between;
+}
+.projectContainer .projectItem{
+    margin-top: 10px;
+}
+.projectContainer .projectItem .submitTaskButton{
+    padding: 10px;
+    background-color: var(--darkgrey);
+    color: var(--white);
+    float: right;
+}
+.projectContainer .projectItem .submitTaskButton .fas{
+    padding-right: 10px;
+}

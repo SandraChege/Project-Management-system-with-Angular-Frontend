@@ -1,0 +1,431 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --beige:#DDD0C8;
+    --darkgrey:#323232;
+    --white:#fff;
+    --black:#000;
+}
+
+/* main container */
+.container {
+    display: grid;
+    grid-template-areas: 'company dashboard';
+    grid-template-rows: 1fr;
+    grid-template-columns: 15%  85%;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* company info */
+.company {
+    grid-area: company;
+    background-color: var(--darkgrey);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.company h1{
+    font-size: 2rem;
+}
+.company div{
+    margin-top: 3rem;
+}
+.company div button{
+    margin-top: 2rem;
+    background-color: var(--darkgrey);
+    border: none;
+    outline: none;
+}
+.company div button a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+
+/* right side */
+.dashboard{
+    grid-area: dashboard;
+    background-color: var(--beige);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.dashboard .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.dashboard .nav .date{
+    font-size: 1.3rem;
+}
+.dashboard .accountIcon{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 10px;
+}
+.dashboard .accountIcon .p-icon{
+    font-size: 40px;
+}
+.dashboard .accountIcon .accountDropdown a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: var(--black);
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--beige);
+    width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-left: -50px;
+    margin-top: 10px;
+}
+.accountDropdown:hover .dropdown-content {
+    display: block;
+    width: auto;
+}
+.dropdown-content a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: var(--black);
+}
+.dropdown-content a:hover {
+    background-color: rgb(192, 190, 190);
+    color: white;
+}
+.projectBoard .cards{
+    display: flex;
+    justify-content: space-between;
+}
+.projectContainer{
+    margin-top: 15px;
+    /* border: solid red 2px; */
+    display: flex;
+    justify-content: center;
+    
+}
+.projectContainer .projectListHeader {
+   display: flex;
+   justify-content: space-around;
+}
+.projectContainer .projectListHeader .addTaskButton{
+    background-color: var(--darkgrey);
+    color: var(--white);
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+.projectContainer .projectListHeader .addTaskButton span{
+    padding-right: 5px;
+}
+
+
+
+
+/* projects */
+
+.projectItems{
+    /* border: solid rgb(0, 81, 255) 2px; */
+    display: flex;
+    height: 72vh;
+    width: 80vw;
+    flex-wrap: wrap;
+    
+}
+.projectItem{
+    /* border: solid rgb(21, 255, 0) 2px; */
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 10px;
+    box-shadow: 2px 2px 2px 2px var(--darkgrey);
+
+}
+
+
+/* view project */
+.viewTaskButton{
+    padding: 10px;
+    background-color: gray;
+}
+.checkboxx {
+    width: 20px; 
+    height: 20px; 
+  }
+
+  
+
+
+/* project info */
+.projectInfo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    width: 60vw;
+    height: 60vh; 
+    display: flex;
+    justify-content: center;
+  
+}
+
+#closeProjectForm {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 10px;
+    cursor: grabbing;
+    font-size: 10px;
+    color:white;
+    background-color: rgb(161, 81, 81);
+}
+
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(5px); 
+    z-index: 999; 
+    display: none; 
+}
+
+.infoBUttons{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    background-color: black;
+}
+.details {
+list-style-type: none;
+padding: 0; 
+margin: 0; 
+
+}
+
+.details li{
+    list-style-type: none;
+    margin-bottom: 10px; 
+    font-size: medium;
+
+}
+
+
+ .infoTitle{
+    text-align: center;
+    margin: 10px;
+    border-bottom: solid grey 1px;
+ }
+
+ .deleteTaskButton{
+    font-size: large;
+    margin: 10px;
+    padding: 7px;
+    background-color: rgb(179, 56, 56);
+    color: white;
+    border-radius: 5px;
+
+    
+ }
+ .closeProjectInfo{
+    position: absolute;
+    top: 0;
+    right:0;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(179, 56, 56);
+    color: white;
+    border-radius: 5px;
+ }
+ .projectDetails{
+    border: solid red 2px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+ }
+
+
+
+
+
+/* project assign form */
+.Container {
+    width: 80vh;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    max-width: 80%;
+    width: 400px; 
+}
+
+
+input {
+    display: block;
+    padding: 15px 56px;
+    margin: 8px;
+    border-radius: 5px;
+    border: solid rgb(170, 170, 170) 1px;
+}
+
+
+
+.formSubmit {
+    padding: 10px 56px;
+    background-color: var(--darkgrey);
+    width: 75%;
+    /* background-color: rgb(73, 72, 72); */
+    margin: 20px;
+    color: white;
+    border-radius: 5px;
+    border: solid gray 1px;
+}
+
+#project-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#userName {
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    padding: 15px 83px;
+    margin: 8px;
+    border-radius: 5px;
+    border: solid rgb(170, 170, 170) 1px;
+    
+    
+    
+  }
+
+  #userName:hover {
+    background: #f0f0f0; 
+    cursor: pointer;
+  }
+
+  /* complete task confirm message */
+  .modal {position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  width: 20vw;
+  height: 20vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+
+  /* delete */
+  .deletebackgroundOverlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(5px); 
+    z-index: 999; 
+    display: none; 
+
+  }
+
+  .deletemodal{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    width: 20vw;
+    height: 20vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .deleteButton{
+    padding: 3px 5px;
+    width: 50px;
+
+  }
+  
+  #yesDeleteButton:hover{
+    background-color: red;
+    color: white;
+   
+  }
+  #noDeleteButton:hover{
+    background-color: green;
+    color: white;
+    
+  }
+  
+
+
+  .modal-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .completeButton{
+    padding: 3px 5px;
+    width: 50px;
+
+  }
+  #noButton:hover{
+    background-color: red;
+    color: white;
+  }
+  #yesButton:hover{
+    background-color: green;
+    color: white;
+  }
+  

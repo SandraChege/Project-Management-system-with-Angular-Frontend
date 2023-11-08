@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin Page</title>
+    <link rel="stylesheet" href="../public/css/signin.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sign in</h1>
+        <div id="signincontainer">
+            <div class="imgcontainer">
+                <img src="../public/images/login.jpg" alt="">
+            </div>
+            <div class="formcontainer">
+                <form  id="login-form">
+                    <p id="email-error"></p>
+                    <label>Email address<span></span></label>
+                    <input type="email"  placeholder="example@gmail.com" id="email">
+
+                    <label>Password</label>
+                    <input type="password" id="password">
+                    <p id="password-error"></p>
+                    <button type="submit">sign in</button>
+                </form>
+                <a href="signup.html">Create a New Account</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../dist/index.js"></script>
+</html>
