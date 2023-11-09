@@ -1,20 +1,23 @@
 <div class="flex justify-center items-center h-[100vh]">
     <div class="registerUser" class="w-[30vw] flex flex-col justify-center shadow-md shadow-gray-500 m-4">
-    <h2 class="text-center mt-4 mb-2">Log into your account </h2>
+    <h2 class="text-center mb-2 text-[2rem]">Sign in </h2>
 
-    <form [formGroup] = "loginForm" (ngSubmit)="loginUser()" class=" flex flex-col m-2 mx-6">
-        <div class="flex flex-col">
-            <label for="">Email</label>
-            <input type="email" formControlName="email" placeholder="Enter your email" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-2 py-[4px] mt-[5px]">
+    <form [formGroup] = "loginForm" (ngSubmit)="loginUser()" class="flex flex-col my-4 mx-6">
+        <div class="flex flex-col py-1">
+            <label for="" class="text-[1rem]">Email</label>
+            <input type="email" formControlName="email" placeholder="Enter your email" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-4 py-[4px] mt-[5px]">
             <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="text-red-500">Email is required</div>
         </div>
-        <div class="flex flex-col">
-            <label for="">Password</label>
-            <input type="password" formControlName="password" placeholder="Enter your password" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-2 py-[4px] mt-[5px]">
+        <div class="flex flex-col py-1">
+            <label for="" class="text-[1rem]">Password</label>
+            <input type="password" formControlName="password" placeholder="Enter your password" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-4 py-[4px] mt-[5px]">
             <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="text-red-500">Password is required</div>
         </div>
         <div class="flex flex-col">
-            <input type="submit" value="Login" class="bg-blue-100 rounded-[2px] border-solid border-[1px] border-blue-100 outline-none px-2 py-[4px] mt-[1rem]">
+            <input type="submit" value="Login" class="bg-blue-400 rounded-[2px] border-solid border-[1px] border-blue-100 outline-none px-4 py-[6px] mt-[1rem] hover:bg-blue-600 hover:cursor-pointer">
+        </div>
+        <div class="my-[4px]">
+            <a routerLink = "/register">Create a new Account</a>
         </div>
     </form>
 </div>

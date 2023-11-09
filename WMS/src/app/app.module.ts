@@ -10,7 +10,10 @@ import { LoginuserComponent } from './loginuser/loginuser.component';
 import { AdminDashBoardComponent } from './admin-dash-board/admin-dash-board.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
-
+import { NotfoundComponent } from './notfound/notfound.component';
+import { HttpClientModule } from '@angular/common/http';
+import {BrowserAnimationsModule} from  '@angular/platform-browser/animations';
+import { DashboardComponent } from './dashboard/dashboard.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,14 +22,18 @@ import { UserdashboardComponent } from './userdashboard/userdashboard.component'
     AdminDashBoardComponent,
     LandingPageComponent,
     UserdashboardComponent,
+    NotfoundComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

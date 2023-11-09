@@ -25,10 +25,11 @@ export class RegisterUserComponent {
     
   }
   registerNewUser() {
-    console.log(this.registrationForm);
-    this.authService.registerNewUser(this.registrationForm.value).then(() => {
+    if (this.registrationForm.valid) {
+      console.log(this.registrationForm);
+      this.authService.registerNewUser(this.registrationForm.value).then(() => {
       this.router.navigate(["login"])
     })
-
+    }
   }
 }

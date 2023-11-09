@@ -1,0 +1,70 @@
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    padding: 10px;
+    background-color: #a2bffa;
+}
+.dashboard .logo{
+    margin-bottom: 10px;
+    font-size: 2rem;
+} 
+.dashboard .logo img{
+    width: 20%;
+}
+.dashboard .links{
+    display: flex;
+    flex-direction: column;
+}
+.dashboard .links a{
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+}
+.dashboard .links a:hover{
+    font-weight: 500;
+    color: #eeeeee;
+}
+.admincontent{
+    width: 80vw;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.admincontent .topdashboard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #a2bffa;
+}
+/* .admincontent .date{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 5px;
+    padding-bottom: 5px;
+} */
+.admincontent .allusers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:5px;  
+}
+.admincontent .Userprofile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15rem;
+    height: 8rem;
+    background-color: var(--blue);
+    border-radius: 10px;
+    font-size: 1.1rem;
+    gap: 0.5rem;
+}
+.Userprofile button{
+    background-color: var(--darkblue);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+}

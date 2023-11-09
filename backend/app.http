@@ -7,8 +7,7 @@ Content-Type: application/json
     "phone_no":"0711900000"
 }
 
-###
-#login user
+###login user
 POST http://localhost:4600/user/login
 Content-Type: application/json
 
@@ -16,30 +15,19 @@ Content-Type: application/json
     "email":"9superbikes@gmail.com",
     "password":"12345678"
 }
-
-
-###
-#get all user
-
+###get all user details
 get http://localhost:4600/user/
-token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI1YWJjNjAxMy0xNWYyLTQzNmQtODgzOC1mYzRhZDMwZDRhMTAiLCJ1c2VyTmFtZSI6IlNhbmRyYSBDaGVnZSIsImVtYWlsIjoiOXN1cGVyYmlrZXNAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiV2VsY29tZWQiOmZhbHNlLCJFbWFpbFNlbnQiOmZhbHNlLCJpc0Fzc2lnbmVkIjpmYWxzZSwiaWF0IjoxNjk5MzgzMDkzLCJleHAiOjE2OTkzODY2OTN9.ZdVohSG6WiLkRzYwQE6U-zATvijEcDtqS51UbhQ7_Rk
+token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI1YWJjNjAxMy0xNWYyLTQzNmQtODgzOC1mYzRhZDMwZDRhMTAiLCJ1c2VyTmFtZSI6IlNhbmRyYSBDaGVnZSIsImVtYWlsIjoiOXN1cGVyYmlrZXNAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiV2VsY29tZWQiOmZhbHNlLCJFbWFpbFNlbnQiOmZhbHNlLCJpc0Fzc2lnbmVkIjpmYWxzZSwiaWF0IjoxNjk5NDc0ODQ4LCJleHAiOjE2OTk0Nzg0NDh9.U4d02UZHghitvnGMy8zMINybLLqNqqscJX6uS6ZBs98
 
-
-###
-#check user details
+###check user details
 GET http://localhost:4600/user/check_user_details
-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI3MWU0OWQ3Mi0yNjIyLTRiZWItOTQxYy1kMDZiZGJkZjhkMzciLCJ1c2VyTmFtZSI6Ik1pY2hhZWwgT3RpZW5vIiwiZW1haWwiOiJtaWNoZWFsdmVudW0wMDdAZ21haWwuY29tIiwiaXNBZG1pbiI6ZmFsc2UsIkFzc2lnbmVkUHJvamVjdElEIjpudWxsLCJFbWFpbFNlbnQiOmZhbHNlLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg4NzU0NTIsImV4cCI6MTY5ODg3OTA1Mn0.qsQi-r_jZVoAihToyO2HRNOOEZttROjDuBWIm1-lofA
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI1YWJjNjAxMy0xNWYyLTQzNmQtODgzOC1mYzRhZDMwZDRhMTAiLCJ1c2VyTmFtZSI6IlNhbmRyYSBDaGVnZSIsImVtYWlsIjoiOXN1cGVyYmlrZXNAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiV2VsY29tZWQiOmZhbHNlLCJFbWFpbFNlbnQiOmZhbHNlLCJpc0Fzc2lnbmVkIjpmYWxzZSwiaWF0IjoxNjk5NDc0NjM0LCJleHAiOjE2OTk0NzgyMzR9.m0ywt4YGjJi5sinZf5e-L0dQge8C_nSCgzkU_FCyq34
 
-
-
-###
-#admin assign project
-
+###admin assign project
 POST http://localhost:4600/project/assignProject
 Content-Type: application/json
 
 {
-   
     "projectName": "BackgroundSerices",
     "projectDescription": "build company chatbot",
     "endDate": "2023-11-9",
@@ -47,15 +35,12 @@ Content-Type: application/json
     "AssignedUserName": "Joshua Ochieng"  
 }
 
-###
-#delete project
+###delete project
 DELETE  http://localhost:4600/project/deleteProject
 Content-Type: application/json
 
 {
-   
-    "projectID":"8dd3c8a8-c87c-4e7a-ab55-44ead598ca4b"
-   
+    "projectID":"8dd3c8a8-c87c-4e7a-ab55-44ead598ca4b"  
 }
 
 

@@ -1,1 +1,32 @@
-<p>admin-dash-board works!</p>
+<div class="dashboard">
+    <div class="logo">
+        <img [src] = "logo" alt="">
+        <p>Water Management System</p>
+    </div>
+    <div class="links">
+        <a href="">Home</a>
+        <a href="">Projects</a>
+        <a href="">Users</a>
+        <a (click)="logOut()">Logout</a>
+    </div>
+</div>
+<div class="admincontent">
+    <div class="topdashboard">
+        <div class="username">
+            <P>Hello Admin</P>
+        </div>
+        <div class="date">
+            {{today | date : 'mediumDate'}}
+        </div>
+    </div>
+    
+    <div class="allusers">
+        <div class="Userprofile" *ngFor="let user of allUsers;">
+            <h1>{{user.userName}}</h1>
+            <p>{{user.role}}</p>
+            <button>View More</button>
+        </div>
+    </div>
+</div>
+
+

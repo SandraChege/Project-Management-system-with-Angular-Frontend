@@ -5,6 +5,7 @@ import { RegisterUserComponent } from './register-user/register-user.component';
 import { AdminDashBoardComponent } from './admin-dash-board/admin-dash-board.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 const routes: Routes = [
   //{path: '', pathMatch:'full', redirectTo: ''},
@@ -12,7 +13,10 @@ const routes: Routes = [
   {path: 'login', component: LoginuserComponent },
   {path: 'register', component: RegisterUserComponent },
   { path: 'admin', component: AdminDashBoardComponent },
-  {path:'user', component:UserdashboardComponent}
+  { path: 'user', component: UserdashboardComponent },
+
+  
+  {path:'**', component:NotfoundComponent}
 ];
 
 @NgModule({

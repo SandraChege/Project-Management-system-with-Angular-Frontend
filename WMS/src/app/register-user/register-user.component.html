@@ -1,31 +1,34 @@
 <div class="flex justify-center items-center h-[100vh]">
     <div class="registerUser" class="w-[30vw] flex flex-col justify-center shadow-md shadow-gray-500 m-4">
-    <h2 class="text-center mt-4 mb-2">Create an Account</h2>
+    <h2 class="text-center mb-2 text-[2rem]">Create an Account</h2>
 
-    <form [formGroup] = "registrationForm" (ngSubmit)="registerNewUser()" class=" flex flex-col m-2 mx-6">
-        <div class="flex flex-col">
-            <label for="">Enter Full Name:</label> 
-            <input type="text" formControlName="userName" placeholder="Enter your name" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-2 py-[4px] mt-[5px]">
+    <form [formGroup] = "registrationForm" (ngSubmit)="registerNewUser()" class="flex flex-col my-4 mx-6">
+        <div class="flex flex-col py-1">
+            <label for=""class="text-[1rem]">Enter Full Name:</label> 
+            <input type="text" formControlName="userName" placeholder="Enter your name" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-4 py-[4px] mt-[5px]">
             <div *ngIf="registrationForm.get('userName')?.invalid && registrationForm.get('userName')?.touched" class="text-red-500">Name is required</div>
         </div>
-        <div class="flex flex-col">
-            <label for="">Email</label>
-            <input type="email" formControlName="email" placeholder="Enter your email" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-2 py-[4px] mt-[5px]">
+        <div class="flex flex-col py-1 ">
+            <label for="" class="text-[1rem]">Email</label>
+            <input type="email" formControlName="email" placeholder="Enter your email" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-4 py-[4px] mt-[5px]">
             <div *ngIf="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched" class="text-red-500">Email is required</div>
         </div>
-        <div class="flex flex-col">
-            <label for="">Phone Number</label>
-            <input type="text" formControlName="phone_no" placeholder="Enter your phone number" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-2 py-[4px] mt-[5px]">
+        <div class="flex flex-col py-1">
+            <label for="" class="text-[1rem]">Phone Number</label>
+            <input type="text" formControlName="phone_no" placeholder="Enter your phone number" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-4 py-[4px] mt-[5px]">
             <div *ngIf="registrationForm.get('phone_no')?.invalid && registrationForm.get('phone_no')?.touched" class="text-red-500">Phone number is required</div>
         </div>
-        <div class="flex flex-col">
-            <label for="">Password</label>
-            <input type="password" formControlName="password" placeholder="Enter your password" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-2 py-[4px] mt-[5px]">
+        <div class="flex flex-col py-1">
+            <label for="" class="text-[1rem]">Password</label>
+            <input type="password" formControlName="password" placeholder="Enter your password" class="rounded-[5px] border-solid border-[1px] border-gray-500 outline-none px-4 py-[4px] mt-[5px]">
             <div *ngIf="registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched" class="text-red-500">Password is required</div>
         <!--<div *ngIf="registrationForm.get('password')?.errors?.minlength">Password must be at least 8 characters long.</div>-->
         </div>
         <div class="flex flex-col">
-            <input type="submit" value="Register" class="bg-blue-100 rounded-[2px] border-solid border-[1px] border-blue-100 outline-none px-2 py-[4px] mt-[1rem]">
+            <input type="submit" value="Register" class="bg-blue-400 rounded-[2px] border-solid border-[1px] border-blue-100 outline-none px-4 py-[6px] mt-[1rem] hover:bg-blue-600 hover:cursor-pointer">
+        </div>
+        <div class="my-[4px]">
+            <a routerLink = "/login">Already have an account</a>
         </div>
     </form>
 </div>

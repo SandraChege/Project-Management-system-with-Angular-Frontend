@@ -2,3 +2,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root{
+    --blue:#a2bffa;
+    --grey:#eeeeee;
+    --lightgray:#f4f4f4;
+    --darkblue:#4783FF;
+}
+app-admin-dash-board{
+    display:flex;
+    /* flex-direction: column; */
+    width:100vw;
+    height: 100vh;
+}
