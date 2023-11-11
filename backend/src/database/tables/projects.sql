@@ -9,9 +9,7 @@
 --     AssignedUserName VARCHAR(250),
 --     createdDateTime DATETIME DEFAULT GETDATE(),
 --     isCompleted BIT DEFAULT 0,
-    --  projectStatus varchar(250) DEFAULT 'pending',
-
-    
+--      projectStatus varchar(250) DEFAULT 'pending',
 -- )
 SELECT * FROM Projects
 ALTER TABLE Projects

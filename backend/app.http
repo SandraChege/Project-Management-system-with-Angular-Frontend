@@ -1,8 +1,8 @@
 post http://localhost:4600/user/register
 Content-Type: application/json
 {
-    "userName":"perez",
-    "email":"perez@gmail.com",
+    "userName":"Perez Annan",
+    "email":"perezannan@gmail.com",
     "password":"12345678",
     "phone_no":"0711900000"
 }
@@ -17,7 +17,8 @@ Content-Type: application/json
 }
 ###get all user details
 get http://localhost:4600/user/
-token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI1YWJjNjAxMy0xNWYyLTQzNmQtODgzOC1mYzRhZDMwZDRhMTAiLCJ1c2VyTmFtZSI6IlNhbmRyYSBDaGVnZSIsImVtYWlsIjoiOXN1cGVyYmlrZXNAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiV2VsY29tZWQiOmZhbHNlLCJFbWFpbFNlbnQiOmZhbHNlLCJpc0Fzc2lnbmVkIjpmYWxzZSwiaWF0IjoxNjk5NDc0ODQ4LCJleHAiOjE2OTk0Nzg0NDh9.U4d02UZHghitvnGMy8zMINybLLqNqqscJX6uS6ZBs98
+token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI1YWJjNjAxMy0xNWYyLTQzNmQtODgzOC1mYzRhZDMwZDRhMTAiLCJ1c2VyTmFtZSI6IlNhbmRyYSBDaGVnZSIsImVtYWlsIjoiOXN1cGVyYmlrZXNAZ21haWwuY29tIiwicm9sZSI6ImFkbWluIiwiV2VsY29tZWQiOmZhbHNlLCJFbWFpbFNlbnQiOmZhbHNlLCJpc0Fzc2lnbmVkIjpmYWxzZSwiaWF0IjoxNjk5NzA5MDI0LCJleHAiOjE2OTk3OTU0MjR9.zVjuY9yH7C9rlzX1S5ksAz9lHmF8bx-1YFze-C3E-M0
+
 
 ###check user details
 GET http://localhost:4600/user/check_user_details
@@ -28,11 +29,11 @@ POST http://localhost:4600/project/assignProject
 Content-Type: application/json
 
 {
-    "projectName": "BackgroundSerices",
-    "projectDescription": "build company chatbot",
-    "endDate": "2023-11-9",
-    "AssignedUserEmail": "cylvonnen@gmail.com",  
-    "AssignedUserName": "Joshua Ochieng"  
+    "projectName": "Sustainable Living App",
+    "projectDescription": "Providing personalized eco-friendly tips",
+    "endDate": "2024-01-15",
+    "AssignedUserEmail": "scottmurimi@example.com",  
+    "AssignedUserName": "Scott Murimi"  
 }
 
 ###delete project
@@ -54,9 +55,7 @@ get  http://localhost:4600/project/singleProject
 Content-Type: application/json
 
 {
-   
     "AssignedUserEmail":"mikvenu9@gmail.com"
-   
 }
 
 ###

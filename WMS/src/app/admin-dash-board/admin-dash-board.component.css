@@ -49,3 +49,27 @@
     background-color: var(--darkblue);
     border-radius: 5px;
 }
+.allprojects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:5px;
+}
+.allprojects .Projectprofile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15rem;
+    /* height: 8rem; */
+    background-color: var(--blue);
+    border-radius: 10px;
+    font-size: 1.1rem;
+    gap: 0.5rem;
+    padding: 5px;
+}
+.allprojects .Projectprofile button{
+    background-color: var(--darkblue);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+}

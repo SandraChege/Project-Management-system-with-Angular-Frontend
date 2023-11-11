@@ -1,8 +1,7 @@
 -- create DATABASE projectManagementSystem
 -- -- -- -- alter database Project_Management MODIFY name  = projectManagementSystem
 -- -- -- -- use projectManagementSystem
-select * from Users
-
+-- select * from Users
 
 -- create TABLE Users (
 --     userID VARCHAR(300) not null PRIMARY KEY,

@@ -27,6 +27,8 @@ export class GetusersComponent {
 
   getAllUserDetails() {
     let res = this.apihttp.getAllUserDetails().subscribe((res) => {
+      console.log(res);
+      
       this.allUsers = res.users;
     });
   }

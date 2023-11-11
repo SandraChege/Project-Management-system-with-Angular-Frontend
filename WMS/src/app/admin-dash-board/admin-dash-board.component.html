@@ -22,6 +22,18 @@
     <div class="projectContainer">
         <button><a routerLink = "/addproject">Add Project</a></button>
     </div>
+    <div class="allprojects">
+        <div class="Projectprofile" *ngFor="let project of allProjectDetails;">
+            <h1>Project Name: {{project.projectName}}</h1>
+            <p>Project Details: {{project.projectDescription}}</p>
+            <p>Project Handler:  {{project.AssignedUserName}}</p>
+            <p>Project Status: {{project.projectStatus}}</p>
+            <div>
+                <button (click)="deleteProject(project.projectID)">Delete Project</button>
+                <!-- <button>Edit Project</button> -->
+            </div>
+        </div>
+    </div>
 </div>
 
 

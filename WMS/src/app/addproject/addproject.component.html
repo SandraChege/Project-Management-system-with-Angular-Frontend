@@ -42,15 +42,19 @@
 
             <div>
                 <label for="">Select an employee:</label> 
-                <select id="userName" formControlName="employee">
+                <select id="userName" formControlName="AssignedUserName">
                     <option value="">Select an employee</option>
+                    <option *ngFor="let emp of employees" [value]="emp">{{ emp }}</option>
                 </select>
                 <!-- <div *ngIf="registrationForm.get('userName')?.invalid && registrationForm.get('userName')?.touched">Date is required</div> -->
             </div>
 
             <div>
                 <label for="email">Employee Email</label>
-                <input type="email" placeholder="example@gmail.com" formControlName="email" readonly>
+                <input type="email" placeholder="example@gmail.com" 
+                formControlName="AssignedUserEmail" 
+                [value]="addProjectForm.get('AssignedUserEmail')?.value"
+                readonly>
             </div>
 
             <div>
