@@ -39,13 +39,35 @@
     padding-bottom: 1rem;
     background-color: #a2bffa;
 }
-/* ADD PROJECT BUTTON */
-.projectContainer{
+/*FORM STYLING*/
+.projectcontainer{
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.projectContainer button{
+.projectcontainer h2{
     padding: 10px;
-    background-color: var(--darkblue);
+    font-size: 1.3rem;
+}
+.projectcontainer form {
+    width: 70%;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+.projectcontainer form div{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+}
+.projectcontainer form div label{
+    padding-bottom: 2px;
+}
+.projectcontainer form div input, .projectcontainer form div select{
+    padding: 5px 10px;
     border-radius: 5px;
+    outline: none;
+}
+.projectcontainer form div input[type=submit]{
+    background-color: var(--darkblue);
 }

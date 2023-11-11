@@ -1,0 +1,64 @@
+<div class="dashboard">
+    <div class="logo">
+        <img [src] = "logo" alt="">
+        <p>Water Management System</p>
+    </div>
+    <div class="links">
+        <a routerLink = "/admin">Home</a>
+        <a >Projects</a>
+        <a routerLink = "/allusers">Users</a>
+        <a (click)="logOut()">Logout</a>
+    </div>
+</div>
+<div class="admincontent">
+    <div class="topdashboard">
+        <div class="username">
+            <P>Hello Admin</P>
+        </div>
+        <div class="date">
+            {{today | date : 'mediumDate'}}
+        </div>
+    </div>
+    <div class="projectcontainer">
+        <h2>Create New Project</h2>
+        <form [formGroup] = "addProjectForm" (ngSubmit)="addNewProject()">
+            <div>
+                <label for="">Enter Project Name:</label> 
+                <input type="text" formControlName="projectName" placeholder="Enter the project name">
+                <!-- <div *ngIf="registrationForm.get('userName')?.invalid && registrationForm.get('userName')?.touched">Name is required</div> -->
+            </div>
+
+            <div>
+                <label for="">Enter Project Details:</label> 
+                <input type="text" formControlName="projectDescription" placeholder="Enter the project details">
+                <!-- <div *ngIf="registrationForm.get('userName')?.invalid && registrationForm.get('userName')?.touched">Project details are required</div> -->
+            </div>
+
+            <div>
+                <label for="">Enter End Date:</label> 
+                <input type="text" formControlName="endDate" placeholder="YYYY-MM-DD">
+                <!-- <div *ngIf="registrationForm.get('userName')?.invalid && registrationForm.get('userName')?.touched">Date is required</div> -->
+            </div>
+
+            <div>
+                <label for="">Select an employee:</label> 
+                <select id="userName" formControlName="employee">
+                    <option value="">Select an employee</option>
+                </select>
+                <!-- <div *ngIf="registrationForm.get('userName')?.invalid && registrationForm.get('userName')?.touched">Date is required</div> -->
+            </div>
+
+            <div>
+                <label for="email">Employee Email</label>
+                <input type="email" placeholder="example@gmail.com" formControlName="email" readonly>
+            </div>
+
+            <div>
+                <input type="submit" value="Add Project">
+            </div>
+       </form>
+    </div>
+    
+</div>
+
+

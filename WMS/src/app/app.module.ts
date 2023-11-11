@@ -13,7 +13,9 @@ import { UserdashboardComponent } from './userdashboard/userdashboard.component'
 import { NotfoundComponent } from './notfound/notfound.component';
 import { HttpClientModule } from '@angular/common/http';
 import {BrowserAnimationsModule} from  '@angular/platform-browser/animations';
-import { DashboardComponent } from './dashboard/dashboard.component'
+import { GetusersComponent } from './getusers/getusers.component';
+import { AddprojectComponent } from './addproject/addproject.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,8 @@ import { DashboardComponent } from './dashboard/dashboard.component'
     LandingPageComponent,
     UserdashboardComponent,
     NotfoundComponent,
-    DashboardComponent,
+    GetusersComponent,
+    AddprojectComponent,
   ],
   imports: [
     BrowserModule,

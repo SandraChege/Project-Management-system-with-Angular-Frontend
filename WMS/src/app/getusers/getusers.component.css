@@ -39,13 +39,32 @@
     padding-bottom: 1rem;
     background-color: #a2bffa;
 }
-/* ADD PROJECT BUTTON */
-.projectContainer{
+/* .admincontent .date{
     display: flex;
     justify-content: flex-end;
+    padding-top: 5px;
+    padding-bottom: 5px;
+} */
+.admincontent .allusers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:5px;  
 }
-.projectContainer button{
-    padding: 10px;
+.admincontent .Userprofile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15rem;
+    height: 8rem;
+    background-color: var(--blue);
+    border-radius: 10px;
+    font-size: 1.1rem;
+    gap: 0.5rem;
+}
+.Userprofile button{
     background-color: var(--darkblue);
-    border-radius: 5px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
 }

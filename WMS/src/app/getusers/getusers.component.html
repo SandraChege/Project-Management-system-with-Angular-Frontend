@@ -5,7 +5,7 @@
     </div>
     <div class="links">
         <a routerLink = "/admin">Home</a>
-        <a >Projects</a>
+        <a>Projects</a>
         <a routerLink = "/allusers">Users</a>
         <a (click)="logOut()">Logout</a>
     </div>
@@ -19,8 +19,13 @@
             {{today | date : 'mediumDate'}}
         </div>
     </div>
-    <div class="projectContainer">
-        <button><a routerLink = "/addproject">Add Project</a></button>
+    
+    <div class="allusers">
+        <div class="Userprofile" *ngFor="let user of allUsers;">
+            <h1>{{user.userName}}</h1>
+            <p>{{user.role}}</p>
+            <button>View More</button>
+        </div>
     </div>
 </div>
 

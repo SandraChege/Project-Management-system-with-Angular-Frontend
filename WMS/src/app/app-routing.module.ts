@@ -6,6 +6,8 @@ import { AdminDashBoardComponent } from './admin-dash-board/admin-dash-board.com
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { GetusersComponent } from './getusers/getusers.component';
+import { AddprojectComponent } from './addproject/addproject.component';
 
 const routes: Routes = [
   //{path: '', pathMatch:'full', redirectTo: ''},
@@ -14,6 +16,8 @@ const routes: Routes = [
   {path: 'register', component: RegisterUserComponent },
   { path: 'admin', component: AdminDashBoardComponent },
   { path: 'user', component: UserdashboardComponent },
+  { path: "allusers", component: GetusersComponent },
+  {path:'addproject', component:AddprojectComponent},
 
   
   {path:'**', component:NotfoundComponent}
